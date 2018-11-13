@@ -5,10 +5,12 @@ rvm:
     - 2.5.1
 install:
     - gem install jekyll bundler
+    - gem install html-proofer
 before_script:
     - bundle install
 script:
     - bundle exec jekyll build
+    - bundle exec htmlproofer ./_site
 branches:
     only:
         - release
@@ -16,3 +18,12 @@ branches:
         - master
 after_success:
     - echo "Build was successful"
+
+deploy:
+   provider: pages
+   skip_cleanup: true
+   github_token: 826e845b317cda3f5298ff6259391a78a273c87a
+   on:
+       branch: master
+
+
