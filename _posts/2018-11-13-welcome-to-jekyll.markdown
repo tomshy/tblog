@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Welcome to Maltom!"
 date:   2018-11-13 11:52:55 +0300
 categories: jekyll update
 ---
